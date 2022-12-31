@@ -40,7 +40,7 @@ body {
 }
 .card-container {
     width: 800px;
-    height: 800px;
+    height: 810px;
     background: linear-radial(circle, var(--colorSeven), var(--colorOne));
     margin: 60px auto;
     border-radius: 25px;
