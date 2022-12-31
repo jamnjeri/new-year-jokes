@@ -2,7 +2,7 @@
 ==========================
 
 ## DESCRIPTION
-**MWAKA-NEW** is a mini web application that wishes users a new years by a personalized new year's message and shares a joke.
+**MWAKA-NEW** is a mini web application that wishes users a personalized new year's and shares a joke.
 
 ```
 https://github.com/jamnjeri/new-year-jokes
