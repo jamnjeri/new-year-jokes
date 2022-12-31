@@ -10,9 +10,9 @@ while(i<1){
 }
 
 function nameAddition(name){
-    console.log(name)
+    // console.log(name)
     let newName = document.querySelector('.name')
-    console.log(newName)
+    // console.log(newName)
     newName.innerText=`Dear ${name.toUpperCase()}`;
 }
 
@@ -96,19 +96,19 @@ function checkDarkStatus(){
     let toggleButton = document.querySelector('.slider')
     // console.log('checking')
     toggleButton.addEventListener('click', function(){
-    let i=0;
+    let i=+1;
     // console.log('Clicked')
     if (i%2 !== 0){
-        // console.log('OFF')
+        console.log('OFF')
         let endpoint = 'joke/Any?safe-mode'
         jokeFetchFunc(endpoint)
+        
     }
     else{
-        // console.log('ON')
+        console.log('ON')
         let endpoint = 'joke/Dark'
         jokeFetchFunc(endpoint)
     }
-    i++;
     })
     // console.log(toggleButton)
 }
@@ -120,3 +120,4 @@ function clearSpaceFunc(parentContent){
 }
 
 jokeFunc()
+checkDarkStatus()
