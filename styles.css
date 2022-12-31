@@ -140,7 +140,7 @@ input:checked + .slider:before {
     font-family: 'Viaoda Libre', cursive;
     /* font-family: 'Love Ya Like A Sister', cursive; */
     /* font-family: 'Abril Fatface', cursive; */
-    font-size: 20px;
+    font-size: 14px;
     color: var(--colorSix);
     font-weight: bold;
     padding: 12px 28px;
