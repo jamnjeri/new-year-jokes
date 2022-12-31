@@ -5,16 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MWAKA-NEW</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Love+Ya+Like+A+Sister&family=Monoton&family=Nabla&family=Petit+Formal+Script&family=Rubik+Bubbles&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- MAIN CARD -->
     <section class="card-container">
         <div class="card">
-            <h1 class="title">HAPPY NEW YEAR 2023</h1>
-            <div class="content">Hope your problems next year last as long as your new year's resolution</div>
+            <div class="header">
+                <p class="title">HAPPY NEW YEAR <span class="block">May You Have A Prosperous And Fulfilling New Year</span></p>
+                <img class="logo" src="./logo(2).png">
+            </div>
+            <div class="content">
+                <p class="Name">Name</p>
+                <p class="word"> , May all your troubles last as long as your New Year's resolutions.</p>
+            </div>
             <div class="button-container">
-                <button>Generate a Joke</button>
-                <button>Toggle</button>
+                <button class="generate">Generate a Joke</button>
+                <div class="dark-humor">
+                    <p class="dark">Dark Humor:  </p>
+                    <!-- Rounded Toggle Switch -->
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="joke">
+                
             </div>
         </div>
     </section>

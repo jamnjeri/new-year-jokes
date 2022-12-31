@@ -1,0 +1,157 @@
+:root {
+    --colorOne: #333533;
+    --colorTwo: #202020;
+    --colorThree: #c9a227;
+    --colorFour: #ffee32;
+    --colorFive: #d6d6d6;
+    --colorSix: #ffffff;
+    --colorSeven: #111111;
+}
+
+body {
+    background: var(--colorOne);
+}
+
+.header {
+    display:flex;
+}
+
+.logo {
+    display: inline-flex;
+    /* top right bottom left */
+    margin: 20px 20px 20px 25px;
+    /* border: 2px solid #c9a227; */
+}
+.title {
+    /* border: 2px solid #c9a227; */
+    font-family: 'Abril Fatface', cursive;
+    font-size: 70px;
+    text-align: center;
+    color: var(--colorSix);
+    margin-left: 10px;
+}
+.block {
+    display: block;
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 24px;
+    text-align: center;
+    /* border: 2px solid #c9a227; */
+    margin-top: 40px;
+}
+.card-container {
+    width: 800px;
+    height: 800px;
+    background: linear-radial(circle, var(--colorSeven), var(--colorOne));
+    margin: 60px auto;
+    border-radius: 25px;
+    padding: 8px;
+    border: 5px solid var(--colorThree);
+}
+
+.content {
+    display: flex;
+    color: var(--colorSix);
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 20px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: var(--colorThree);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--colorThree);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+
+.button-container {
+    display: flex;
+}
+
+.dark {
+    color: var(--colorSix);
+    padding-right: 30px;
+    font-size: 16px;
+}
+
+.dark-humor {
+    display: flex;
+    /* top right bottom left */
+    /* margin: 5px 10px 20px 400px; */
+    margin-left: 400px;
+    text-align: center;
+    width: 200px;
+}
+
+.generate {
+    font-family: 'Viaoda Libre', cursive;
+    /* font-family: 'Love Ya Like A Sister', cursive; */
+    /* font-family: 'Abril Fatface', cursive; */
+    font-size: 20px;
+    color: var(--colorSix);
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 12px;
+    background-color: var(--colorThree);
+}
+
+.joke {
+    color: var(--colorSix);
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid #c9a227;
+}
