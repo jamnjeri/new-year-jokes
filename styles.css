@@ -150,8 +150,14 @@ input:checked + .slider:before {
 
 .joke {
     color: var(--colorSix);
-    height: 120px;
+    height: 100px;
     border-radius: 10px;
     margin-top: 10px;
-    border: 2px solid #c9a227;
+    /* border: 2px solid #c9a227; */
+    font-family: 'Abril Fatface', cursive;
+    font-size: 16px;
+}
+
+.joke p{
+    padding-left: 5px;
 }
