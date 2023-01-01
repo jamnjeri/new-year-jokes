@@ -4,6 +4,8 @@
 ## DESCRIPTION
 **MWAKA-NEW** is a mini web application that wishes users a personalized new year's and shares a joke.
 
+**DISCLAIMER:**  The dark humour button displays jokes that may seem problematic/horrific/rude to some individuals. Viewer discretion is advised. 
+
 ```
 https://github.com/jamnjeri/new-year-jokes
 ```
@@ -57,3 +59,7 @@ npm install
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 Copyright (c) 2022 **Mathu Jamila**
+
+
+## Sample Image:
+![Application Layout](sample-image.png)
