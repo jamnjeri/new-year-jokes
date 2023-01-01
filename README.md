@@ -35,7 +35,8 @@ npm install
     1. Main card page with message and joke generating button
 
 ### CONCLUSION
-
+* Learned that you can access your CSS values from your Javascript.
+* Finally understood an instance where a timeOut function is used.
 
 ### Languages used to create this project
 * HTML,

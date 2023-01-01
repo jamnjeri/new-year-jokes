@@ -1,46 +1,28 @@
-function userPrompt(){
-    // Prompt in loop to ensure that the user is only prompted once per page reload
-    let i =0;
-    while(i<1){
-        let name = prompt('Kindly enter your name:')
-        if(name != null){
-            nameAddition(name)
-        }
-        i++;
-    }
-}
+// Prompt in loop to ensure that the user is only prompted once per page reload
+// let i =0;
+// while(i<1){
+//     let name = prompt('Kindly enter your name:')
+//     if(name != null){
+//         nameAddition(name)
+//     }
 
-//Function to add entered name to page
-function nameAddition(name){
-    // console.log(name)
-    let newName = document.querySelector('.name')
-    // console.log(newName)
-    newName.innerText=`Dear ${name.toUpperCase()}`;
-}
+//     i++;
+// }
 
-//Activate generate button
-function jokeFunc(){
-    let button=document.querySelector('.generate')
-    // console.log(button)
-    button.addEventListener('click', function(){
-        let state = 'Pressed'
-        // console.log(state)
-        
-        //Check if dark humor button is active
-
-        // Check if it's activated or deactivated
-        checkCssFunc()
-        return state
-        
-    })
-}
+// function nameAddition(name){
+//     // console.log(name)
+//     let newName = document.querySelector('.name')
+//     // console.log(newName)
+//     newName.innerText=`Dear ${name.toUpperCase()}`;
+// }
 
 //Function to get toggle button state
 function toggleButtonPressFunc(){
     let toggleButton =document.querySelector('.slider')
     // console.log(toggleButton)
     toggleButton.addEventListener('click', function(){
-        // console.log("Toggled")
+        // Set a timeout to wait for the css slider transition to complete
+        setTimeout(() => {checkCssFunc()}, "2000")
     })
 }
 
@@ -51,29 +33,36 @@ function checkCssFunc(){
     //Get toggle button color
     const style = getComputedStyle(toggleButton)
     const backgroundColor = style.backgroundColor
+    // console.log(backgroundColor);
 
-    //Get correct endpoint
-    setEndpointFunc(backgroundColor)
-    // return backgroundColor
     //Add event listener
+    setEndpointFunc(backgroundColor)
 }
+
 
 // Set correct endpoint according to dark button on or not
 function setEndpointFunc(backgroundColor){
     if (backgroundColor === 'rgb(204, 204, 204)'){
-        // console.log('grey')
-        let endpoint = 'joke/Any?safe-mode'
-        jokeFetchFunc(endpoint)
-        // console.log(endpoint)
-        return endpoint;
+        console.log('grey')
+        let endpoint = 'joke/Dark'
+        jokeFunc()
     }
     else if (backgroundColor === 'rgb(201, 162, 39)'){
-        // console.log('gold')
-        let endpoint = 'joke/Dark'
-        jokeFetchFunc(endpoint)
-        // console.log(endpoint)
-        return endpoint;
+        console.log('gold')
+        let endpoint = 'joke/Any?safe-mode'
+        jokeFunc()
     }
+}
+
+//Activate generate button
+function jokeFunc(){
+    let button=document.querySelector('.generate')
+    // console.log(button)
+    button.addEventListener('click', function(){
+        //Check if dark humor button is active
+        checkCssFunc()
+        
+    })
 }
 
 //Function to fetch from joke API
@@ -110,6 +99,7 @@ function jokeFetchFunc(endpoint){
             // let twoResponse = ${}
 
         })
+
 }
 
 function displayJokeFunc(jokes, i){
@@ -152,16 +142,15 @@ function clearSpaceFunc(parentContent){
     }
 }
 
-
 function initialize (){
-    //Prompt user for name and change it in message
-    // userPrompt()
+    //Prompt user for name
 
-    //Check if Generate button is pressed (return state)
+    //Change it in message
+
+    //Check if Generate button is pressed
     jokeFunc()
-    //Check if toggle button is active or not (return color)
+    //Check if toggle button is active or not
     toggleButtonPressFunc()
-
     //Fetch API data
     //Display API data
 }
